@@ -53,3 +53,71 @@ body {
   flex-direction: column;
   border-left: 1.5px solid rgb(150,150,150);
 }
+
+/* General Information */
+.general-information {
+  padding: 2rem 1rem;
+}
+.general-information {
+  text-align: left;
+}
+
+.general-information .field > div {
+  display: inline-block;
+}
+
+.general-information input {
+  padding: 0;
+  box-sizing: border-box;
+  width: 80%;
+  border: 0.5px solid rgb(50,50,50); 
+  border-radius: 2px;
+}
+
+.general-information .field {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.general-information .field .editable-input {
+  flex-grow: 1;
+}
+
+.general-information .name {
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+.general-information .name > :last-child {
+  margin-top: 0.5rem;
+}
+
+
+.general-information .name, .general-information .name input {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.general-information .field, .general-information .field input {
+  font-size: 1.1rem;
+
+}
+
+.general-information .field i {
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+.general-information .field .spacing {
+  margin-right: 1.15rem;
+}
+
+.general-information .editable-input span {
+  padding: 0.1rem;
+}
+
+.general-information .editable-input input {
+  padding: 0.1rem;
+  box-shadow: 0.5px 0.5px 1px;
+}

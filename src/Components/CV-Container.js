@@ -1,4 +1,5 @@
 import React from 'react';
+import GeneralInformation from './General-Information';
 
 class CVContainer extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class CVContainer extends React.Component {
     return (
       <div className={`cv-container${this.props.className ? ` ${this.props.className}` : ''}`}>
         <div className="left-side">
-        <div className="placeholder1"></div>
+        <GeneralInformation />
         </div>
         <div className="right-side">
           <div className="placeholder2"></div>
