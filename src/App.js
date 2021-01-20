@@ -1,5 +1,5 @@
 import React from 'react';
-import CVContainer from './Components/CV-Container';
+import CVContainer from './components/CV-Container';
 import './reset.css';
 import './style.css';
 import '@fortawesome/fontawesome-free/css/solid.min.css';
