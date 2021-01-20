@@ -8,7 +8,7 @@ class EditableInput extends React.Component {
     super(props);
 
     this.state = {
-      isEditing: false,
+      isEditing: this.props.edit ? true : false,
       value: props.text,
     }
     this.handleKeyDown = this.handleKeyDown.bind(this);
