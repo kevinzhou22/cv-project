@@ -25,7 +25,6 @@ class EditableInput extends React.Component {
 
   handleChangeInput(e) {
     const inputValue = e.target.value;
-    console.log(inputValue);
     this.setState({ value: inputValue })
   }
 
