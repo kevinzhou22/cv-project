@@ -15,7 +15,7 @@ class WorkExperienceEntry extends React.Component {
       <div className="work-experience-entry">
         <div className="top-row-container">
           <EditableInput edit={edit} className="field company" text="Company Name" />
-          <EditableInput edit={edit} className="field date" text="Star Date - End Date" />
+          <EditableInput edit={edit} className="field date" text="Start Date - End Date" />
         </div>
         <div className="second-row-container">
           <EditableInput edit={edit} className="field position" text="Position"></EditableInput>
