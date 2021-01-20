@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cv-project/static/css/main.5178a9c1.chunk.css",
+    "main.js": "/cv-project/static/js/main.d3be7f4f.chunk.js",
+    "main.js.map": "/cv-project/static/js/main.d3be7f4f.chunk.js.map",
+    "runtime-main.js": "/cv-project/static/js/runtime-main.e0af79ca.js",
+    "runtime-main.js.map": "/cv-project/static/js/runtime-main.e0af79ca.js.map",
+    "static/css/2.d03b40fb.chunk.css": "/cv-project/static/css/2.d03b40fb.chunk.css",
+    "static/js/2.cd555d31.chunk.js": "/cv-project/static/js/2.cd555d31.chunk.js",
+    "static/js/2.cd555d31.chunk.js.map": "/cv-project/static/js/2.cd555d31.chunk.js.map",
+    "index.html": "/cv-project/index.html",
+    "static/css/2.d03b40fb.chunk.css.map": "/cv-project/static/css/2.d03b40fb.chunk.css.map",
+    "static/css/main.5178a9c1.chunk.css.map": "/cv-project/static/css/main.5178a9c1.chunk.css.map",
+    "static/js/2.cd555d31.chunk.js.LICENSE.txt": "/cv-project/static/js/2.cd555d31.chunk.js.LICENSE.txt",
+    "static/media/solid.min.css": "/cv-project/static/media/fa-solid-900.f4f93856.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0af79ca.js",
+    "static/css/2.d03b40fb.chunk.css",
+    "static/js/2.cd555d31.chunk.js",
+    "static/css/main.5178a9c1.chunk.css",
+    "static/js/main.d3be7f4f.chunk.js"
+  ]
+}
