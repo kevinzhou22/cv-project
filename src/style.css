@@ -28,6 +28,11 @@ body {
   font-weight: bold;
 }
 
+/* Editable Textarea - specific */
+.editable-textarea span  {
+  white-space: pre-wrap;
+}
+
 /* CV-Container */
 .cv-container {
   max-width: 70em;
