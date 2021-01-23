@@ -2,14 +2,9 @@ import React from 'react';
 import EditableInput from './Editable-Input';
 import EditableTextarea from './Editable-Textarea';
 
-class WorkExperienceEntry extends React.Component {
-  constructor(props) {
-    super(props);
+function WorkExperienceEntry(props) {
 
-  }
-
-  render () {
-    const edit = this.props.edit === undefined ? false : this.props.edit;
+    const edit = props.edit === undefined ? false : props.edit;
 
     return (
       <div className="work-experience-entry">
@@ -25,7 +20,6 @@ class WorkExperienceEntry extends React.Component {
         </div>
       </div>
     );
-  }
 }
 
 export default WorkExperienceEntry;

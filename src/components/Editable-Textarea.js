@@ -1,65 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 /* Wrap around inputs or textareas to make them editable
 State is not handled by either Editable or the child
 input / textarea. */
-class EditableInput extends React.Component {
-  constructor(props) {
-    super(props);
+function EditableInput(props) {
 
-    this.state = {
-      isEditing: this.props.edit === undefined ? false : this.props.edit,
-      value: props.text,
-    }
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.setEditing = this.setEditing.bind(this)
-    this.handleChangeInput = this.handleChangeInput.bind(this);
-  }
+  const [isEditing, setIsEditing] = useState(props.edit === undefined ? false : props.edit);
+  const [value, setValue] = useState(props.text);
 
-  handleKeyDown(e) {
+  let handleKeyDown = function handleKeyDown(e) {
     if (e.key === "Escape") {
-      this.setEditing(false);
+      setIsEditing(false);
       return;
     }
-  }
+  };
+  handleKeyDown = handleKeyDown.bind(this);
 
-  handleChangeInput(e) {
+  let handleChangeInput = function handleChangeInput(e) {
     const inputValue = e.target.value;
-    this.setState({ value: inputValue })
-  }
+    setValue(inputValue);
+  };
+  handleChangeInput = handleChangeInput.bind(this);
 
-  setEditing(bool) {
-    this.setState({ isEditing: bool });
-  }
 
-  render() {
-    const value = this.state.value;
+  let displayedContent;
 
-    let displayedContent;
-    
-    if (this.state.isEditing) {
-      displayedContent = (
-        <div
-          onBlur={() => this.setEditing(false)}
-          onKeyDown={ (e) => this.handleKeyDown(e)}  
-        >
-          <textarea type="text" value={value} onChange={this.handleChangeInput}></textarea>
-        </div>
-      );
-    } else {
-      displayedContent = (
-        <div onClick={() => this.setEditing(true)}>
-          <span>{ value }</span>
-        </div>
-      );
-    }
-
-    return (
-      <div className={`editable-textarea ${this.props.className ? ` ${this.props.className}` : ''}`}>
-        {displayedContent}
+  if (isEditing) {
+    displayedContent = (
+      <div
+        onBlur={() => setIsEditing(false)}
+        onKeyDown={(e) => handleKeyDown(e)}
+      >
+        <textarea type="text" value={value} onChange={handleChangeInput}></textarea>
+      </div>
+    );
+  } else {
+    displayedContent = (
+      <div onClick={() => setIsEditing(true)}>
+        <span>{value}</span>
       </div>
     );
   }
+
+  return (
+    <div className={`editable-textarea ${props.className ? ` ${props.className}` : ''}`}>
+      {displayedContent}
+    </div>
+  );
+
 
 }
 

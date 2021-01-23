@@ -1,46 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import WorkExperienceEntry from './Work-Experience-Entry';
 import uniqid from 'uniqid';
 
-class WorkExperience extends React.Component {
-  constructor(props) {
-    super(props);
+function WorkExperience() {
+  const [keys, setKeys] = useState([]);
 
-    this.handleAddEntry = this.handleAddEntry.bind(this);
-    this.state = {
-      keys: [],
-    }
-  }
 
-  handleAddEntry() {
-    this.setState((state) => {
-      return ({
-        keys: [...state.keys, uniqid() ]
-      });
+  let handleAddEntry = function handleAddEntry() {
+    setKeys((prevKeys) => {
+        return [...prevKeys, uniqid()]
     });
-  }
+  };
+  handleAddEntry = handleAddEntry.bind(this);
 
-  render() {
-    const { keys } = this.state;
-    const workExperienceEntries = keys.map((key) => {
-      return (
-        <WorkExperienceEntry key={key} edit={true} />
-      );
-    });
-
+  const workExperienceEntries = keys.map((key) => {
     return (
-      <div className="work-experience">
-        <h3>Work Experience</h3>
-        <div className="work-experience-entries-container">
-          {workExperienceEntries}
-        </div>
-        <div className="add-work-experience-container">
-          <button type="button" className="add-work-experience" onClick={this.handleAddEntry}>+ Work Experience</button>
-        </div>
-      </div>
-
+      <WorkExperienceEntry key={key} edit={true} />
     );
-  }
+  });
+
+  return (
+    <div className="work-experience">
+      <h3>Work Experience</h3>
+      <div className="work-experience-entries-container">
+        {workExperienceEntries}
+      </div>
+      <div className="add-work-experience-container">
+        <button type="button" className="add-work-experience" onClick={handleAddEntry}>+ Work Experience</button>
+      </div>
+    </div>
+
+  );
+
 
 }
 
