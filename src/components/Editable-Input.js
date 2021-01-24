@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 
-/* Wrap around inputs or textareas to make them editable
-State is not handled by either Editable or the child
-input / textarea. */
 function EditableInput(props) {
 
   const [isEditing, setIsEditing] = useState(props.edit === undefined ? false : props.edit);
